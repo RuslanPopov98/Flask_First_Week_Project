@@ -1,0 +1,9 @@
+<h1>Туры по направлению {{data.departures.dep}}:</h1>
+
+{% for idx, tour in data.tours.items() %}
+    <p>
+    {% if tour.departure == dep%}
+	{{ tour.country }}: <a href="/data/tours/{{idx}}/">{{ tour.title }} {{ tour.price }} {{ tour.stars }} </a>
+    </p>
+    {% endif %}
+{% endfor %}

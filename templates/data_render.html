@@ -1,0 +1,6 @@
+<h1> Все туры: </h1>
+{% for idx, tour in tours.items() %}
+<p>{{ tour.country }}
+	<a href="/data/tours/{{idx}}/"> {{ tour.title }} {{ tour.price }} {{ tour.stars }} </a>
+</p>
+{% endfor %}
